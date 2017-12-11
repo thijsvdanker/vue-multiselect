@@ -165,6 +165,15 @@
         default: true
       },
       /**
+       * The width for the placeholder
+       * @default auto
+       * @type {String}
+      */
+      placeholderWidth: {
+        type: String,
+        default: 'auto'
+      },
+      /**
        * Limit the display of selected options. The rest will be hidden within the limitText string.
        * @default 99999
        * @type {Integer}
@@ -253,7 +262,7 @@
       inputStyle () {
         if (this.multiple && this.value && this.value.length) {
           // Hide input by setting the width to 0 allowing it to receive focus
-          return this.isOpen ? { 'width': 'auto' } : { 'width': '0', 'position': 'absolute' }
+          return this.isOpen ? { 'width': this.placeholderWidth } : { 'width': '0', 'position': 'absolute' }
         }
       },
       contentStyle () {
