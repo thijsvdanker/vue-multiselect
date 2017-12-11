@@ -262,10 +262,10 @@
       inputStyle () {
         if (this.multiple) {
           if (this.isOpen) {
-            return 'width': this.placeholderWidth;
+            return { 'width': this.placeholderWidth }
           }
           // Hide input by setting the width to 0 allowing it to receive focus
-          return this.hasValues ? { 'width': '0', 'position': 'absolute' } : { 'width': this.placeholderWidth } :
+          return this.hasValues ? { 'width': '0', 'position': 'absolute' } : { 'width': this.placeholderWidth }
         }
       },
       contentStyle () {
@@ -282,7 +282,7 @@
           return this.prefferedOpenDirection === 'above'
         }
       },
-      hasValues() {
+      hasValues () {
         return this.values && this.values.length
       }
     }
