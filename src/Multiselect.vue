@@ -260,7 +260,7 @@
           : ''
       },
       inputStyle () {
-        if (this.multiple && this.value && this.value.length) {
+        if (this.multiple) {
           // Hide input by setting the width to 0 allowing it to receive focus
           return this.isOpen ? { 'width': this.placeholderWidth } : { 'width': '0', 'position': 'absolute' }
         }
