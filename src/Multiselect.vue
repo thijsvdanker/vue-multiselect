@@ -283,7 +283,7 @@
         }
       },
       hasValues () {
-        return this.values && this.values.length
+        return this.value && this.value.length
       }
     }
   }
